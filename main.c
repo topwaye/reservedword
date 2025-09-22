@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2025.9.22 TOP WAYE topwaye@hotmail.com
  * 
- * Copy and replace HTML or SQL reserved words with predefined words
+ * Copy and replace HTML or SQL reserved words with predefined words for converting command text into non-command text
  * 
  */
 
