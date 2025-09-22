@@ -3,8 +3,8 @@
  *
  * Copyright (C) 2025.9.22 TOP WAYE topwaye@hotmail.com
  * 
- * Copy and replace HTML or SQL reserved words with predefined words for converting command text into non-command text
- * 
+ * copy and replace HTML or SQL reserved words with predefined words
+ * for converting command text into non-command text
  */
 
 #include <stdio.h>
@@ -63,7 +63,7 @@ int copy_and_replace ( char * src, int src_len, char * dst, int dst_size, int re
 					
 					if ( *( src + i ) != *( pos + k ) )
 					{
-						printf("?\n");
+						printf ( "?\n" );
 						a = 0;
 						i = ii;
 						break;
