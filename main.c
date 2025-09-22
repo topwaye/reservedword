@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /*
  * main.c
  *
@@ -8,6 +6,8 @@
  * Copy and replace HTML or SQL reserved words with predefined words
  * 
  */
+
+#include <stdio.h>
 
 #define MAX_RESERVED_PLACE_COUNT	2
 #define MAX_RESERVED_CHAR_COUNT		16
@@ -18,7 +18,7 @@ char reserved_words [ ] [ MAX_RESERVED_PLACE_COUNT ] [ MAX_RESERVED_CHAR_COUNT ]
 	{ "<DIV>"  , "000"    },
 	{ "SELECT" , "456789" },
 	{ "INSERT" , "qwert"  },
-	{ "CREATE" , "asdf"   },
+	{ "CREATE" , "asdf"   }
 };
 
 int reserved_word_count = sizeof ( reserved_words ) / sizeof ( reserved_words [ 0 ] );
@@ -29,7 +29,7 @@ int copy_and_replace ( char * src, int src_len, char * dst, int dst_size, int re
 	int h, i, j, k;
 	int a, ii;
 
-	if ( dst_size < 1 ) /* size = len + 1 */
+	if ( dst_size < 1 ) /* size >= len + 1 */
 		return 0;
 
 	h = 0, i = 0; 
