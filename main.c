@@ -14,11 +14,11 @@
 		
 char reserved_words [ ] [ MAX_RESERVED_PLACE_COUNT ] [ MAX_RESERVED_CHAR_COUNT ] =
 {
-	{ "<HTML>" , "123"    },
-	{ "<DIV>"  , "000"    },
-	{ "SELECT" , "456789" },
-	{ "INSERT" , "qwert"  },
-	{ "CREATE" , "asdf"   }
+	{ "<HTML>" , "&lt;HTML&gt;" },
+	{ "<DIV>"  , "&lt;DIV&gt;"  },
+	{ "SELECT" , "1&;"          },
+	{ "INSERT" , "2&;"          },
+	{ "CREATE" , "3&;"          }
 };
 
 int reserved_word_count = sizeof ( reserved_words ) / sizeof ( reserved_words [ 0 ] );
