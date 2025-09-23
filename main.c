@@ -10,15 +10,15 @@
 #include <stdio.h>
 
 #define MAX_RESERVED_PLACE_COUNT	2
-#define MAX_RESERVED_CHAR_COUNT		16
+#define MAX_RESERVED_CHAR_COUNT		32
 		
 char reserved_words [ ] [ MAX_RESERVED_PLACE_COUNT ] [ MAX_RESERVED_CHAR_COUNT ] =
 {
-	{ "<HTML>" , "&lt;HTML&gt;" },
-	{ "<DIV>"  , "&lt;DIV&gt;"  },
-	{ "SELECT" , "1&;"          },
-	{ "INSERT" , "2&;"          },
-	{ "CREATE" , "3&;"          }
+	{ "<HTML>" , "&#60;&#72;&#84;&#77;&#76;&#62;" },
+	{ "<DIV>"  , "&#60;&#68;&#73;&#86;&#62;"      },
+	{ "SELECT" , "&#83;&#69;&#76;&#69;&#67;&#84;" },
+	{ "INSERT" , "&#73;&#78;&#83;&#69;&#82;&#84;" },
+	{ "CREATE" , "&#67;&#82;&#69;&#65;&#84;&#69;" }
 };
 
 int reserved_word_count = sizeof ( reserved_words ) / sizeof ( reserved_words [ 0 ] );
@@ -109,7 +109,7 @@ int copy_and_replace ( char * src, int src_len, char * dst, int dst_size, int re
 	return h;
 }
 
-#define MAX_TEST_SIZE 64
+#define MAX_TEST_SIZE	128
 
 int main ( )
 {
